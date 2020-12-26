@@ -1,0 +1,74 @@
+\documentclass[a4j, 11pt, dvipdfmx, uplatex]{jsarticle}
+
+%プリアンブル
+\usepackage[dvipdfmx]{graphicx,color}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{bm}
+
+\usepackage{siunitx}
+\usepackage{url}
+\usepackage{mhchem}
+
+\usepackage{listings}
+\lstset{
+  basicstyle={\ttfamily},           % 書体の指定
+  identifierstyle={\small},
+  commentstyle={\small\itshape},
+  keywordstyle={\small\bfseries},
+  ndkeywordstyle={\small},
+  stringstyle={\small\ttfamily},
+  frame={tb},                       % フレームの指定
+  breaklines=true,                  % 行が長くなった場合の改行
+  columns=[l]{fullflexible},
+  numbers=left,
+  xrightmargin=0zw,
+  xleftmargin=3zw,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=1zw,
+  lineskip=-0.5ex                   % 行間の調整
+% linewidth=12cm,                   % フレームの横幅
+% framesep=10pt,                    % フレームと中身（コード）の間隔
+% tabsize=2                         % Tabを何文字幅にするかの指定
+}
+\renewcommand{\lstlistingname}{ソースコード}
+
+\makeatletter
+\newcommand{\subsubsubsection}{\@startsection{paragraph}{4}{\z@}%
+  {1.0\Cvs \@plus.5\Cdp \@minus.2\Cdp}%
+  {.1\Cvs \@plus.3\Cdp}%
+  {\reset@font\sffamily\normalsize}
+}
+\makeatother
+\setcounter{secnumdepth}{4}
+
+\usepackage[dvipdfmx]{hyperref} %パッケージリストの末尾に置くの無難
+\usepackage{pxjahyper} %
+\hypersetup{% hyperrefオプションリスト
+	setpagesize=false,
+	bookmarksnumbered=true,
+	bookmarksopen=true,
+	colorlinks=true, 
+	linkcolor=black,
+	citecolor=black,
+	urlcolor=black,
+}
+
+\title{}
+\date{}
+\author{}
+
+\begin{document}
+\maketitle
+\newpage
+
+
+
+\begin{thebibliography}{10}
+    \bibitem{textbook} author 「name」publisher
+\end{thebibliography}
+
+
+\end{document}

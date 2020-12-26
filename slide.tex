@@ -1,0 +1,81 @@
+\documentclass[dvipdfmx, 11pt, notheorems]{beamer}
+
+% platexを使う必要があるので、latexmk実行時に``-latex=platex''オプションを入れる
+
+%-- Standard preamble --%
+\usepackage{color}
+\usepackage{siunitx}
+\usepackage{url}
+\usepackage{mhchem}
+\usepackage[absolute,overlay]{textpos}
+\renewcommand{\figurename}{Fig.}
+
+%--- 和文用 ---%
+\usepackage{bxdpx-beamer}
+\usepackage{pxjahyper}
+\usepackage{minijs}                             % 和文用
+\renewcommand{\kanjifamilydefault}{\gtdefault}  % 和文用
+
+%--- スライドの見た目 ---%
+\usetheme{metropolis}                               % スライドのテーマ
+\usecolortheme{orchid}
+% \usetheme{Madrid}                                 % その他のスライドのテーマ
+% \usecolortheme{seahorse}
+% \usecolortheme{seagull}
+\usefonttheme{professionalfonts}
+\useinnertheme{circles}
+\setbeamertemplate{frametitle}[default][center]
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[page number]
+\setbeamerfont{footline}{size=\normalsize,series=\bfseries}
+\setbeamercolor{}{}
+
+%--- 定義環境 ---%
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{theorem}{定理}
+\newtheorem{definition}{定義}
+\newtheorem{proposition}{命題}
+\newtheorem{lemma}{補題}
+\newtheorem{corollary}{系}
+\newtheorem{conjecture}{予想}
+\newtheorem*{remark}{Remark}
+\renewcommand{\proofname}{}
+
+%--- フォント基本設定 ---%
+\usepackage[T1]{fontenc}        % 8bit フォント
+\usepackage{textcomp}           % 欧文フォントの追加
+\usepackage[utf8]{inputenc}     % 文字コードをUTF-8
+\usepackage{otf}                % otfパッケージ
+
+%--- Original commands ---%
+% REF: https://qiita.com/t_uda/items/22b6ad113aecce6b340a
+\makeatletter
+\newenvironment{bblock}[2][]%
+{\def\@bblocktmp{#2}%
+ \begin{block}{#1} \begin{\@bblocktmp} }
+{ \end{\@bblocktmp} \end{block} }
+\makeatother 
+
+
+%-- Title --%
+\title[]{}                    % [略タイトル]{タイトル} 
+\author[]{}                   % [略名前]{名前}
+\institute[]{}                % [略所属]{所属}
+\date{\today}                 % 日付
+
+
+\begin{document}
+  % 表紙
+  \begin{frame}[plain]\frametitle{}
+    \titlepage 
+  \end{frame}
+
+  % 目次
+  \begin{frame}\frametitle{Contents}
+    \tableofcontents
+  \end{frame}
+
+
+\end{document}
